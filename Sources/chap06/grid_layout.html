@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-rows: 1fr 5fr 1fr;
+            grid-template-columns: 2fr 5fr 3fr;
+            grid-template-areas:
+                "header header header"
+                "nav main aside"
+                "footer footer footer";
+            grid-gap: .50em;
+        }
+
+        header {
+            grid-area: header;
+            background-color: rgb(235, 238, 82);
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: rgb(194, 178, 238);
+        }
+
+        main {
+            grid-area: main;
+            background-color: rgb(231, 152, 192);
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: rgb(138, 236, 207);
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: rgb(243, 198, 198);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>HEADER</header>
+        <nav>NAV</nav>
+        <main>MAIN</main>
+        <aside>ASIDE</aside>
+        <footer>FOOTER</footer>
+    </div>
+</body>
+
+</html>

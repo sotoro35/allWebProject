@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX05</title>
+</head>
+<body>
+
+    <input type="text" id="input">
+    <button onclick="clickBtn()">비속어 체크</button>
+
+    <script>
+        function clickBtn(){
+
+            var input = document.getElementById('input')
+            var input = input.value
+            check = false
+
+            if(input.match(/x/gi)){
+                check = true
+            } else check = false
+
+
+            document.write(`check('${input}') -> ${check}`)
+        }
+    </script>
+    
+</body>
+</html>

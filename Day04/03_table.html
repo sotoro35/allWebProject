@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>table style</title>
+        <meta charset="utf-8">
+
+        <style>
+
+            table{
+                border: 2px solid ;
+                border-collapse: collapse; /* 경계선을 구분하지 말고 무너뜨려줘.. 합쳐줘.. */
+                text-align: center;
+            }
+
+            th,td{border: 1px solid; padding: 10px 5px;}
+            
+            th{background-color: aquamarine; color: azure; border-bottom: double red;} /* double 넣으면 두줄이 됨 */
+
+            tr:nth-child(2n){ /* n은 모든 자식.. 수식이 가능함.. 2n+1 이런거.. */
+                background-color: yellow;
+            }
+
+            td:first-child{width: 40%;}
+
+            /* 직접 명시적으로 만들지 않았지만 존재하는 table의 자식요소에 대한 확인! */
+            table>:nth-child(1){border: 10px solid blue;}
+
+            table>tr{color: violet;} 
+            /* 테이블에는 숨겨놓은 자식이 존재함.. tbody라는 .. table을 생성하면 자동 생성됨.. 그러므로 tr은 자손임*/
+
+            table tr{color: violet;} 
+
+
+        </style>
+    </head>
+
+    <body>
+        
+        <table>
+            <tr>
+                <th>이름</th>
+                <th>이메일</th>
+            </tr>
+
+            <tr>
+                <td>김철수</td>
+                <td>chul@google.com</td>
+            </tr>
+
+            <tr>
+                <td>손흥민</td>
+                <td>son@google.com</td>
+            </tr>
+
+            <tr>
+                <td>백현우</td>
+                <td>back@google.com</td>
+            </tr>
+
+            <tr>
+                <td>홍현아</td>
+                <td>hong@google.com</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

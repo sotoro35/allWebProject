@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>연습문제 주관식</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <!-- 1번 -->
+        <input type="number" min="1" max="5">
+
+
+        <!-- 2번 -->
+        <input type="date">
+
+        <!-- 3번 -->
+        <input type="color">
+
+        <!-- 4번 .. 아이디를 안써서 라벨 클릭이 안먹힘-->
+        <p>
+            <input type="radio" name="aaa" value="HTML">
+                <label for="aaa">HTML</label>
+            <input type="radio" name="aaa" value="CSS">
+                <label for="aaa">CSS</label>
+            <input type="radio" name="aaa" value="JavaScript">
+                <label for="aaa">JavaScript</label>
+        </p>
+
+
+        <!-- 답지를 보고, 아이디 추가함 -->
+        <p>
+            <input type="radio" id="html" name="aaa" value="HTML">
+                <label for="html">HTML</label>
+
+            <input type="radio" id="css" name="aaa" value="CSS">
+                <label for="css">CSS</label>
+
+            <input type="radio" id="javascript" name="aaa" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+        </p>
+        
+
+
+        <!-- 4번 답지 -->
+        <fieldset>
+            <legend>어떤 언어를 배우고 싶으세요?</legend>
+            <input type="radio" id="html" name="language" value="HTML">
+            <label for="html">HTML</label>
+            <br>
+            <input type="radio" id="css" name="language" value="CSS">
+            <label for="css">CSS</label>
+            <br>
+            <input type="radio" id="javascript" name="language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+          </fieldset>
+
+        <!-- 5번 -->
+        <label><input type="checkbox">자전거</label>
+        <label><input type="checkbox">자동차</label>
+        <label><input type="checkbox">보트</label>
+        
+
+    </body>
+</html>

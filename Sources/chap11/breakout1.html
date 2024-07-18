@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+        canvas {
+            background: rgb(243, 245, 117);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+    <script>
+        // 캔버스 객체를 찾아서 변수 canvas에 저장한다.
+        let canvas = document.getElementById("myCanvas");
+        let context = canvas.getContext("2d"); // 컨텍스트 객체를 얻는다.
+        let ball = { // 공을 리터럴 객체로 정의한다.
+            x: canvas.width / 2,
+            y: canvas.height - 30,
+            dx: 2, // 공의 x 방향 속도
+            dy: -2, // 공의 y 방향 속도
+            radius: 10, // 공의 반지름
+            draw: function () { // 공을 화면에 그리는 메소드
+                context.beginPath();
+                context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                context.fillStyle = "#000000";
+                context.fill();
+                context.closePath();
+            }
+        };
+        function gameLoop() { // 게임루프
+            context.clearRect(0, 0, canvas.width, canvas.height); // 화면을 지운다.
+            ball.draw(); // 화면에 공을 그린다.
+            // 공이 화면의 왼쪽이나 오른쪽에 도달하였으면 방향을 바꾼다.
+            if (ball.x + ball.dx > canvas.width - ball.radius
+                || ball.x + ball.dx < ball.radius) {
+                ball.dx = -ball.dx;
+            }
+            if (ball.y + ball.dy > canvas.height - ball.radius
+                || ball.y + ball.dy < ball.radius) {
+                ball.dy = -ball.dy;
+            }
+            ball.x += ball.dx; // 공의 위치를 변경한다.
+            ball.y += ball.dy;
+        }
+        setInterval(gameLoop, 10);// 10밀리초마다 gameLoop()을 호출한다.
+    </script>
+</body>
+
+</html>

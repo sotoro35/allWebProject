@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        img {
+            width: 100px;
+            display: block;
+            position: relative;
+            margin: 10px;
+            animation: myanim 5s infinite;
+        }
+
+        #img1 {
+            animation-timing-function: ease-out;
+        }
+
+        #img2 {
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes myanim {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img id="img1" src="rabbit.png"></div>
+    <img id="img2" src="turtle.png"></div>
+</body>
+
+</html>

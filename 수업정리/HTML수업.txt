@@ -1,0 +1,19 @@
+HTTP Request
+index.html 찾을때.. GET/POST
+
+HTTP Response 
+요청한 값에 대한 결과를 코드로 줌..
+
+HTML(Hyper Text Markup Language) 웹페이지를 기술하기 위한 마크업언어
+텍스트에 태그문을 붙여서 .. (식별자같은거..) 그 텍스트가 뭔지 설명하는 내용을 태그문에 담음
+
+https://www.w3schools.com/
+언어공부 추천 사이트
+
+HTML 주요 용어
+요소element (시작태그+콘텐츠+종료태그) = 안드로이드에서는 뷰 라고 칭하는것들..(텍스트뷰,이미지뷰등..)
+태그 tag
+속성 attribute (이름 = "값") = 시작태그안에서 써야함
+
+<!DOCTYPE html> html의 버전을 알려주는것 .. 5는 이렇게만 쓰면 됨
+

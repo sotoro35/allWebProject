@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX02</title>
+    
+</head>
+<body>
+    <span>구입날짜:</span>
+    <input type="date" id="date">
+    <input type="button" value="검사" onclick="clickBtn()">
+
+    <script>
+        function clickBtn(){
+            var date = document.getElementById('date')
+            var date2 = date.value
+
+            var date3 = new Date(date2)
+            var now = new Date()
+
+            var time = now - date3
+            var result = time / (1000*60*60*24)
+            result = Math.floor(result)
+
+            if(result > 30) {
+                alert('교환 기간이 지났습니다')
+            } else{
+                alert('교환가능합니다')
+            }
+
+            
+        }
+
+    </script>
+</body>
+</html>

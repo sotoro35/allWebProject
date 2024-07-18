@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>텍스트 스타일</title>
+        <meta charset="utf-8">
+
+        <!-- 내부 스타일 시트 -->
+        <style>
+            /* 이 영역안에서는 CSS문법체계를 따름 */
+
+            /* 브라우저에서 이미 인식하고 있는 키워드는 ""가 없어도 된다. */
+            p{font-family: "Cambria",sans-serif;}
+            p{font-family: "휴먼명조",serif;}
+            p{font-family: monospace;}
+
+            /* 사용자의 디바이스에 설치된 글꼴에 따라 적용이 안될 수도 있음 */
+            /* 그래서 웹폰트 사용을 권장 */
+
+            /* 폰트 글꼴명 만들기 (웹폰트) */
+            @font-face {
+                font-family:"My Font";
+                src: url("./font/온글잎 매일옥자체.ttf");
+            }
+
+            /* 네트워크가 연결이 안되어이있으면 폰트를 서버에서 받아올수없기에 기본폰트를 꼭 써준다 */
+            p{font-family: "My Font", serif;}
+
+            p{font-size: small;}
+            p{font-size: 20px;}
+            p{font-size: 100%;}
+            p{font-size: 150%;}
+            p{font-size: 1em;}
+            p{font-size: 1.5em;}
+            p{font-size: 2em;}
+            p{font-size: 1rem;}
+            /* em은 부모기준으로 배수가 적용. rem은 최상위 root요소의 글꼴 사이즈 비율로 지정(권장) */
+
+            /* 폰트의 굵기 지정 = bold , normal */
+            p{font-weight: bold;}
+
+            /* 폰트의 기울기 지정 = italic, normal */
+            p{font-style: italic;}
+
+            /* 폰트관련 속성들의 축양형 속성 순서: [weight/style] size family */
+            p{font: bold italic 2rem "휴면옛체",serif}
+
+            /* 텍스트에 관련된 속성들 */
+            /* 텍스트 정렬 (수평정렬)*/
+            p{text-align: right;}
+            p{text-align: center;}
+            p{text-align: justify;}
+
+            /* 텍스트 꾸미기(선긋기) */
+            p{text-decoration: underline;}
+            p{text-decoration: overline;}
+            p{text-decoration: line-through;}
+            p{text-decoration: none;}
+
+            /* 텍스트 변환 */
+            p{text-transform: uppercase;}
+            p{text-transform: lowercase;}
+            p{text-transform: capitalize;}
+            
+            /* 텍스트 그림자 */
+            p{text-shadow: 5px 3px 5px red;}
+
+            /* 워드 랩 */
+            p.aaa{
+                width: 15rem; border: 1px solid blue;
+                word-wrap: break-word;
+                }
+
+            /* 다중 컬룸(칸) */
+            #column{
+                column-count: 2;
+                column-gap: 80px;
+                column-rule: 4px dotted green;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <p>Hello world</p>
+        <p>안녕 세상아</p>
+
+        <p class="aaa">
+            한글은 전혀 문제 없이 자동으로 워드랩 됨.
+            sdkfkakakjdaslflkdlkafj djfladjlf aklsdfjalk
+        </p>
+
+        <p id="column">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nisi quam ex reiciendis. Possimus perspiciatis facere harum ipsa, pariatur molestias voluptates praesentium sed minus quibusdam iste laborum perferendis accusamus quod!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est similique temporibus illo molestias beatae, necessitatibus rerum expedita error. Unde aut nostrum beatae non qui eaque veniam maxime commodi magnam recusandae!
+        </p>
+
+        <!-- text-align은 블럭요소에서만 의미 있음. -->
+        <div style="text-align: center; border: 1px dotted red;">Hello</div>
+        <span style="text-align: center; border: 1px dotted red;">Hello</span>
+
+        <div style="text-align: center;"><img src="../Day02/image/submit.png" alt="서밋버튼이미지"></div>
+
+
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX04</title>
+
+    <script>
+
+        function clickBtn(){
+            var str= document.getElementById('input')
+            str = str.value
+
+            str1= str.charAt(0)
+            
+            str2= str1.toUpperCase()
+
+            str3= str.replace(str1,str2)
+
+            document.write( str+ " -> " + str3)
+
+        }
+
+        
+        
+
+    </script>
+</head>
+<body>
+
+    <input type="text" id="input">
+    <input type="button" value="클릭" onclick="clickBtn()">
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+        }
+
+        #container {
+            display: flex;
+            border: solid;
+            width: 300px;
+            height: 300px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .box {
+            background-color: rgb(250, 246, 246);
+            border: 2px rgb(230, 227, 96) solid;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item {
+            font-size: 80px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100px;
+            height: 100px;
+            background-color: #42188f;
+            color: #FFF;
+            text-align: center;
+        }
+
+        .move {
+            background-color: rgb(230, 138, 102);
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <div id="container">
+        <div id="box1" class="box">
+            <div id="item1" draggable="true" class="item">2</div>
+        </div>
+        <div id="box2" class="box">
+            <div id="item2" draggable="true" class="item">3</div>
+        </div>
+        <div id="box3" class="box">
+            <div id="item3" draggable="true" class="item">1</div>
+        </div>
+        <div id="box4" class="box"></div>
+    </div>
+
+    <script>
+        function init() {
+            let items = document.querySelectorAll('.item');
+            items.forEach(function (item) {
+                item.addEventListener('dragstart', dragging);
+                item.addEventListener('dragend', draggingEnded);
+            });
+            items = document.querySelectorAll('.box');
+            items.forEach(function (item) {
+                item.addEventListener('dragenter', preventDefault);
+                item.addEventListener('dragover', preventDefault);
+                item.addEventListener('drop', dropItem);
+            });
+        }
+
+        function dragging(e) {
+            e.target.classList.add('move');
+            e.dataTransfer.setData("Text", e.target.id);
+        }
+
+        function draggingEnded(e) {
+            e.target.classList.remove('move');
+        }
+
+        function preventDefault(e) {
+            e.preventDefault();
+        }
+
+        function dropItem(e) {
+            let src = e.dataTransfer.getData("Text");
+            e.target.appendChild(document.getElementById(src));
+        }
+    </script>
+</body>
+
+</html>

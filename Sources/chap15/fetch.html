@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+       
+    <script>
+        function getFromServer() {
+            let file = "testfile1.txt"
+            fetch(file)
+                .then(x => x.text())
+                .then(y => document.getElementById("target").innerHTML = y);
+
+        }
+    </script>
+</head>
+
+<body>
+        <div id="target" style="width: 300px; height: 60px; border: solid 1px black;">
+            </div>
+        <button type="button" onclick="getFromServer()">GET DATA</button>
+</body>
+
+</html>

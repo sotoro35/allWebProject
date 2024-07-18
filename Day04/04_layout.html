@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout style</title>
+        <meta charset="utf-8">
+
+        <style>
+            /* display속성 */
+            #aa{display: inline;}
+            #aa{display: inline; width: 300px;}
+            #aa{display: inline-block; width: 300px;}
+            
+            img.bb{display: block;}
+            
+            ul .cc{display: none;}
+
+            
+        </style>
+    </head>
+
+    <body>
+
+        <!-- display 속성 연습용 -->
+        <p id="aa">Hello world</p>
+        <a href="">Naver</a>
+        <strong>Good morning</strong>
+
+        <img src="./img/lion.png" alt="저는 사자입니다." class="bb">
+
+        <hr>
+
+        <ul>
+            <li>aaa</li>
+            <li class="cc">bbb</li>
+            <li>ccc</li>
+        </ul>
+
+        <hr>
+
+        <!-- 블럭요소와 인라인 요소를 같이 사용할 때 고려할 것들! -->
+
+        <!-- 블럭요소안에 인라인 요소 넣기.. -->
+        <div style="background-color: tomato; border: solid; padding: 5px;">
+            Nice <strong>aaa</strong> world 
+        </div>
+
+        <!-- 블럭요소안에 다른 블럭요소 넣기 -->
+        <div style="background-color: teal; border: solid; padding: 5px;">
+            Nice <p>aaa</p> world 
+        </div>
+
+        <!-- p요소안에 또 p요소 -->
+        <!-- 대부분의 요소는 종료태그가 없어도 에러가 없다. -->
+        <!-- 종료태그없이 다른 시작태그를 만나면 스스로 종료라고 인식한다  -->
+        <!-- <p>aaa <p>bbb</p> ccc </p>  = p단락 2개로 본다 . aaa와 bbb는 p단락. ccc는 그냥글자로 본다. 마지막 /p는 무시된다-->
+        <p style="background-color: beige; border: solid; padding: 5px;">
+            Nice <p>aaa</p> world 
+        </p>
+
+        <!-- h1요소 안에 또 h요소 넣기 -->
+        <h1 style="background-color: burlywood; border: solid; padding: 5px;">Nice <h1>aaa</h1> world</h1>
+
+        <!-- div안에 div는 중첩으로 잘 인식함  -->
+        <div style="background-color: aquamarine; border: solid; padding: 5px;">
+            Nice <p>aaa</p> world 
+        </div>
+
+        <!-- 인라인요소안에 블럭요소를 넣으면 인라인 요소의 감쌀 능력을 벗어남 -->
+        <span style="background-color: gray; border: solid; padding: 5px;">Nice <p>aaa</p> world</span>
+
+        <hr>
+
+        <!-- position -->
+        <div class="ss">
+            <p id="p1">block #1</p>
+            <p id="p2">block #2</p>
+            <p id="p3">block #3</p>
+            <p id="p4">block #4</p>
+        </div>
+
+        <style>
+
+            /* absolute position을 사용하는 자식요소가 본인의 좌상단을 기준점으로 배치되도록 하려면.. static position 아니여야함 */
+            div.ss{
+                position: relative; /* 기본 위치가 바뀌면 안되서... */
+                background-color: black;
+            }
+
+            #p1{
+                background-color: aqua;
+                width: 200px;
+                height: 50px;
+
+                position: static; /* 원래 놓여질 위치에 놔짐*/
+
+                /* 위치설정 속성(position:static인 경우에는 위치속성이 안됨) */
+                left: 50px;
+                top: 30px;
+            }
+
+            #p2{
+                background-color: yellow;
+                width: 200px;
+                height: 50px;
+
+                position: relative; /* 기본적으로 원래 놓여질 위치에 놔짐 */
+
+
+                /* 위치설정 속성(position:relative 경우에는 위치설정값이 적용됨) */
+                left: 30px;
+                top: 20px;
+            }
+
+            #p3{
+                background-color: lightgreen;
+                width: 200px;
+                height: 50px;
+
+                position: absolute; /* 문서의 좌상단을 기준으로 위치를 지정함. 기본값 위치에서 열외됨. */
+                /* 단, 부모요소가 static position이 아니면 부모요소를 기준으로 위치를 정함 */
+                
+                /* 위치설정 속성 */
+                left: 50px;
+                top: 100px;
+
+                
+            }
+
+            #p4{
+                background-color: blueviolet;
+                width: 200px;
+                height: 50px;
+
+                position: fixed; /* 브라우저를 기준으로 위치를 지정함.. 스크롤해도 따라다님 */
+     
+                
+                /* 위치설정 속성 */
+                right: 0px;
+                bottom: 0px;
+            }
+
+
+        </style>
+
+
+
+    </body>
+</html>

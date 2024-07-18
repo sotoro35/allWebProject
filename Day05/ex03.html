@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>ONE</div>
+        <div>TWO</div>
+        <div>THREE</div>
+        <div>FOUR</div>
+        <div>FIVE</div>
+        <div>SIX</div>
+    </div>
+
+    <style>
+        .container{
+            display: grid;
+
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px;
+
+        }
+
+        @media(max-width: 600px){
+                .container{
+                    grid-template-columns: auto;
+                    grid-template-rows: 100px 100px 100px 100px 100px 100px;
+                }
+            }
+
+        .container div{
+            background-color: black;
+            margin: 5px;
+            padding: 5PX;
+            color: white;
+        }
+    </style>
+</body>
+</html>

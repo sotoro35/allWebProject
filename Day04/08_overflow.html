@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>overflow style</title>
+
+        <style>
+            p{
+                background-color: lightgreen;
+                width: 200px;
+                height: 50px;
+            }
+
+            #target{
+                border: 2px solid black;
+                width: 300px;
+                height: 100px;
+
+                overflow: hidden; /* 안에 숨겨버림 */
+                overflow: scroll; /* 스크롤바가 세로 가로 다 생김 */
+                overflow: auto; /* 아래 스크롤바를 없애버림 */
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="target">
+            <p>block #1</p>
+            <p>block #2</p>
+            <p>block #3</p>
+            <p>block #4</p>
+            <p>block #5</p>
+        </div>
+        
+    </body>
+</html>

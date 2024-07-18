@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>박스모델(요소크기 및 배경)</title>
+        <meta charset="utf-8">
+
+        <!-- 내부 스타일 시트 -->
+        <style>
+            
+            .border{
+                border-style: solid;
+                border-top-style: dotted;
+
+                border-width: 4px;
+                border-bottom-width: 8px;
+                border-color: red;
+                border-right-color: aqua;
+
+                border-radius: 20px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 0px;
+
+                /* 경계선을 이미지로 지정 */
+                border: 30px solid transparent;
+
+                border-image: url('./img/border.png');
+                border-image-slice: 30 30; /* 조각 하나의 크기 : 높이 넓이 */
+                border-image-repeat: round;
+
+                /* 요소 크기 */
+                width: 70%;
+                height: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            html,body{height: 100%;}
+
+            /* 인라인요소의 크기 설정 (인라인 요소는 크기속성이 무시됨) */
+            a{background-color: red; width: 200px;}
+            em{background-color: aqua; width: 200px;}
+
+            /* 인라인블럭요소의 크기 설정 */
+            img{width: 150px; border: 1px solid black;}
+            input{width: 100%; background-color: thistle;}
+
+            /* 마진에 대한 이해 */
+            #p1,#p2{background-color: aquamarine; height: 50px; margin: 0px;}
+
+            #p1{background-color: aquamarine; height: 50px; margin: 0px;}
+            #p2{background-color: bisque; width: 50%; height: 50px; margin-top: -20px;}
+
+            /* 배경 */
+            #bg{
+                background-color: azure;
+                background-image: url('./img/image.png');
+                background-size: 200px 100px; /* 너비 높이 */
+                background-repeat: repeat-x;
+                background-repeat: repeat-y;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-position: right top;
+                background-position: top center;
+
+                margin: 20px;
+                padding: 30px;
+            }
+
+
+        </style>
+
+    </head>
+    
+    <body>
+        
+        <!-- 경계선 / 요소크기 / 중앙정렬 -->
+        <p class="border">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia numquam aliquam suscipit pariatur exercitationem itaque alias, veniam sunt consectetur distinctio, totam dolorum voluptatibus expedita beatae ducimus quasi a minima vitae?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti commodi a voluptates inventore nemo animi doloribus ad eveniet quisquam, laboriosam quidem, laudantium vitae veniam rerum maiores blanditiis nam, voluptatibus est!
+        </p>
+
+        <!-- 인라인요소는 width와 height 속성이 적용되지 않음 -->
+        <a href="">naver</a>
+        <em>Hello world</em>
+
+        <!-- 인라인요소 중에서 크기조절이 가능한 요소들: inline-block요소 -->
+        <img src="./img/audio.png" alt="오디오 이미지">
+        <input type="text">
+
+
+        <!-- 마진에 대한 이해 -->
+        <div>
+            <p id="p1">p1</p>
+            <p id="p2">p2</p>
+        </div>
+
+        <!-- 배경 -->
+        <p id="bg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ea quam deleniti possimus accusantium placeat veniam. Commodi aliquid asperiores pariatur provident nisi quasi itaque voluptate dolores, maiores vero consequatur. Qui!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit inventore nobis consequatur minima. Dolore sint laborum, eius ab adipisci aliquam eum maxime nemo reiciendis corporis sit est debitis vel nihil
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempore voluptatibus nostrum, distinctio, vel aperiam eius suscipit cum consequatur amet dignissimos? Fugit, eos ut cumque temporibus aut voluptatibus inventore provident?
+        </p>
+
+        <!-- 배경 이미지가 붙어있을 위치를 지정 -->
+        <p class="ss">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro nihil libero, necessitatibus quasi corrupti a laborum iure rerum accusamus voluptatibus quod. Optio quidem quod voluptates ducimus vel ad veniam doloremque!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero non, suscipit nemo perferendis atque dolorum, eos quasi reiciendis officiis delectus ratione architecto? Omnis amet beatae ut dolorum magni, totam quisquam?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas illum totam quos accusantium debitis aspernatur nobis, repellendus vero illo cumque! Aperiam eaque distinctio soluta, consectetur neque illum amet quis quidem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor repellat nostrum sunt cumque sapiente voluptatum laudantium illum quibusdam! Nobis adipisci error animi obcaecati deleniti consequatur ipsum dicta harum eaque nam!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, id? Ratione non rem quibusdam debitis quidem odit labore necessitatibus architecto molestias? Pariatur eius doloribus voluptate maxime nulla sint nemo debitis!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque deserunt consequatur eius commodi nostrum. Dolorem dolores, deleniti beatae laborum totam minus obcaecati cupiditate optio corrupti quam dicta reprehenderit corporis nam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit deleniti ratione odit, maxime eius necessitatibus placeat obcaecati dolores ab recusandae nostrum, vitae ex! Soluta optio modi corrupti consequuntur dolore quaerat!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magni! Consectetur tenetur architecto autem dolor explicabo minus? Deserunt expedita autem, harum magnam, asperiores, fuga excepturi tenetur a enim qui non.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quis, nihil labore repudiandae illum necessitatibus vel inventore nam neque veritatis? Saepe quia illum asperiores animi nihil sunt qui amet architecto?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione obcaecati veniam delectus, cupiditate magni laudantium voluptate soluta illum ex minima, praesentium possimus harum quis odit quia ipsum mollitia suscipit? Pariatur.
+        </p>
+
+        <!-- 또 다른 내부 스타일 시트가 있어도 적용됨 -->
+        <style>
+            .ss{
+
+                width: 60%;
+                height: 300px;
+                border: 2px solid blue;
+                overflow: scroll;
+                margin-left: auto;  margin-right: auto;
+                background-image: url('./img/image.png');
+                background-size: 200px 100px;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                background-attachment: scroll; /* default : 요소에 붙어 있는 배경 느낌 */
+                background-attachment: local; /* 콘텐츠 안에 붙어있는 느낌 */
+                background-attachment: fixed; /* 브라우저의 위치를 기준으로 붙음 */
+            }
+        </style>
+
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #clock {
+            fill: transparent;
+            stroke-width: 2px;
+            stroke: rgb(36, 4, 4);
+        }
+
+        #sec {
+            stroke: rgb(224, 29, 29);
+        }
+    </style>
+</head>
+
+<body>
+    <svg id="clock" viewBox="0 0 300 300">
+        <circle id="clock" cx="50" cy="50" r="45" />
+            <line id="sec" x1="50" y1="50" x2="50" y2="16" />
+    </svg>
+    <script>
+        setInterval(function () {
+            function rotate(ele, deg) {
+                ele.setAttribute('transform', 'rotate(' + deg + ' 50 50)')
+            }
+            let d = new Date()
+            rotate(sec, 6 * d.getSeconds())
+        }, 1000);
+    </script>
+</body>
+
+</html>

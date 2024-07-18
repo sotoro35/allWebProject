@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>시멘틱태그로 만든 레이아웃 구조</title>
+        <meta charset="utf-8">
+
+        <style>
+
+            /* *{border: 1px dotted red;} */
+            
+            body{
+                background-color: #efe5d0;
+                font-family: 'Times New Roman', Times, serif;
+                margin: 0px;
+            }
+
+            header{
+                background-color: #e3afed;
+                padding: 2rem;
+            }
+
+            header h1{margin: 0px;}
+
+            nav{
+                display: table-cell;
+                background-color: #ffd800;
+                padding: 1rem;
+            }
+
+            article{
+                display: table-cell;
+                background-color: yellow;
+                padding: 1rem;
+            }
+
+            footer{
+                background-color: gray;
+                color: white;
+                text-align: center;
+                padding: 0.5rem;
+            }
+
+            #root{
+                width: 80%;
+                min-width: 500px;
+                margin: 0px auto;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+        <div id="root">
+
+            <header>
+                <h1>My Blog Page</h1>
+            </header>
+
+            <nav>
+                <h1>Links</h1>
+                <ul>
+                    <li><a href="https://www.naver.com">naver</a></li>
+                    <li><a href="https://www.google.com">google</a></li>
+                    <li><a href="https://www.kakao.com">kakao</a></li>
+                </ul>
+                <figure>
+                    <img src="img/man.png" alt="beach" width="85" height="85">
+                    <figcaption>남자그림</figcaption>
+                </figure>
+            </nav>
+
+            <article>
+                <section>
+                    <h1>Semantic Tags</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis atque aspernatur recusandae ducimus quis corrupti voluptatem aliquam, culpa eveniet saepe amet fuga harum vero dolor blanditiis sunt? Totam, pariatur enim!</p>
+                </section>
+
+                <section>
+                    <h1>Semantic Tags</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis atque aspernatur recusandae ducimus quis corrupti voluptatem aliquam, culpa eveniet saepe amet fuga harum vero dolor blanditiis sunt? Totam, pariatur enim!</p>
+                </section>
+            </article>
+
+            <footer>
+                Copyright &copy; 2024 MRHI
+            </footer>
+        </div>
+        
+    </body>
+</html>
